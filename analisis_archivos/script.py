@@ -53,7 +53,7 @@ for carpeta_actual, subcarpetas, archivos in os.walk(carpeta_raiz):
         
 for archivo in archivos_encontrados: #Recorre la lista con las rutas absolutas de los archivos
     tamaño_archivo_bytes = os.path.getsize(archivo) #miramos el tamaño del archivo
-    tamaño_archivo_megabytes = tamaño_archivo_bytes / (1024.0 * 1024.0) # Lo pasamos a MB
+    tamaño_archivo_megabytes = tamaño_archivo_bytes / (1024.0 * 1024.0) # Lo pasamos a MegaBytes
 
     if tamaño_archivo_megabytes >= 32:
         peticion_32 = requests.get(url_mas_32, params=params) #realiza una peticion a para obtener un json con la url para subir el archivo
