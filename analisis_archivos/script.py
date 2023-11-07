@@ -100,7 +100,7 @@ for archivo in archivos_encontrados: #Recorre la lista con las rutas absolutas d
         print(f"Archivo {os.path.basename(archivo)} movido a {carpeta_normales}")
 
     ruta_archivo_analizado = ruta_nombre_maliciosos if positivos > 0 else ruta_nombre_normal #da la nueva ruta del archivo que se ha analizado
-    es_malicioso = 'Si' if positivos > 0 else 'No' #Determina si el archivo es malicioso o no
+    es_malicioso = 'Si' if positivos > 0 else 'No' #Determina si el archivo es malicioso o no en una variable
     
     insertar_registros = "INSERT INTO archivos (ruta_archivo, archivo, es_malicioso, reporte_archivo) VALUES (%s, %s, %s, %s)"
     with open(ruta_archivo_analizado, 'rb') as archivo_abierto, open(ruta_reporte_total, 'r', encoding="utf-8") as reporte_abierto:
