@@ -8,3 +8,5 @@ Le daremos permisos 777 a la carpeta html: sudo chmod -R 777 /var/www/html
 
 Antes de crear los usuarios crearemos la base de datos y sus tablas con: python3 script_db.py
 La forma de utilizarlo será entrar al localhost desde el navegador web y crear una cuenta, después loguearnos con ella, subir archivos, etc... 
+
+Tendremos que crear una cuenta en VirusTotal y copiar la ApiKey en la línea 41 de script.py
